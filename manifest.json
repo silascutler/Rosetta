@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Rosetta",
+    "description": "A Chrome extension to automatically resolve threat group names",
+    "version": "1.0",
+ /* "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },*/
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js":["background.js"],
+      "run_at": "document_end"
+
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ]
+}
